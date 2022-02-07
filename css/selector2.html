@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- ul li = ul에 속해있는  li를 스타일 지정 -->
+        <!--ol속에 ol에 대해서 border 등을 설정할때, id를 지정하고 >를 사용함.-->
+        <!--    ">" 부등호는 선택자   ","는 ol과ul을 한번에 설정 가능하게 함-->
+
+        <style>
+            ul li{
+                color: red;
+            }
+            #first_ol>li{
+                border: 1px solid chartreuse;
+                color: green;
+            }
+            #second_ol>li{
+                border: 1px solid blue;
+                color: skyblue;
+            }
+            ul,ol{
+                background-color: slategray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="first_ol">
+            <li>HTML</li>
+            <li>CSS
+                <ol id="second_ol">
+                    <li>selector</li>
+                    <li>decolation</li>
+                </ol>
+            </li>
+            <li>JavaScript</li>
+        </ol>
+    </body>
+</html>

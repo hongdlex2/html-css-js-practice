@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container{
+            height: 200px;
+            background-color: powderblue;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .item{
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+            flex-basis: 300px;
+            /* flex-grow: 1; */
+            /* 컨테이너의 면적을 아이템수(5)로 나누어 각각 1나씩 가짐 */
+        }
+
+        .item:nth-child(1){
+            flex-shrink: 0;
+        }
+
+        .item:nth-child(2){
+            /* item클래스의 두번째 항목 */
+            /* flex-basis: 300px; */
+            /* 기본크기를 지정함 */
+
+            /* flex-grow:  2; */
+            /* cascading에 의해서 우선순위 더 높음 */
+            /* 위의 grow를 통해서 나누어진 항목중에서 2번째 아이템(자식)이 2를 차지함 */
+            /* 1, 2, 1, 1, 1 */
+            /* grow의 값은 상대적인 값(비율)을 가짐 */
+            
+            flex-shrink: 2;
+            
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1 : shrink 0</div>
+        <div class="item">2 : shrink 2</div>
+        <div class="item">3 : shrink 설정x 기본값 1</div>
+        <div class="item">4 : shrink 설정x 기본값 1</div>
+        <div class="item">5 : shrink 설정x 기본값 1</div>
+
+    </div>
+</body>
+</html>

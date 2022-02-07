@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .contaniner{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+        footer{
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+        }
+        .content nav{
+            border-right: 1px solid gray;
+            flex-grow: 0;
+        }
+        .content aside{
+            border-left: 1px solid gray;
+        }
+
+        @media(max-width:500px){
+            .content{
+                flex-direction: column;
+            }
+            .content nav, .content aside{
+                border: none;
+                flex-basis: auto;
+            }
+            main{
+                order: 0;
+            }
+            nav{
+                order: 1;
+            }
+            aside{
+                order: 2;
+            }
+        }
+        
+        .content main{
+            flex-grow: 1;
+        }
+
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main,aside{
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>nav입니다</li>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatibus mollitia quos quod iure sequi, vel nulla culpa quaerat error sed distinctio delectus perferendis voluptates animi ut rem corrupti recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eaque aliquid voluptatem corrupti sed repellat quisquam doloremque totam repudiandae consectetur.
+            </main>
+            <aside>
+                AD(광고를 위한 배치)
+            </aside>
+        </section>
+        <footer>
+            <a href="http://naver.com">Footer입니다</a>
+        </footer>
+    </div>
+</body>
+</html>
