@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        a{
+            font-size: 3rem;
+            display: inline-block;
+            transition-property: transform font-size;
+            /* transition-property: all; (같은 효과이나 property개별 지정이 가능함)*/
+            transition-duration: 0.2s;
+
+            /* transition: all 0.2s;
+            축약형1
+            transition:font-size: 1s, transform 0.2s;
+            축약형2(개별설정 가능) */
+        }
+        a:active{
+            transform: translate(20px, 20px);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Click</a>
+</body>
+</html>
