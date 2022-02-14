@@ -2,10 +2,22 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
     <style>
         body{
             /* font-family: "fontello"; */
             /* 코드가 아니라 이름으로 클래스를 호출할때는 폰트페밀리를 지정할 필요가 없음 */
+        }
+        /* pseudo 선택자 :before, :after :hover :active*/ 
+        #test:before{
+            content: "s";
+            color: red;
+        }
+        #test:after{
+            content: "e";
+        }
+        #moon{
+            font-family: fontello;
         }
     </style>
 </head>
@@ -13,9 +25,14 @@
     <!-- 0xf186 -->
     <!-- 0대신 &#으로 교체 -->
     <!-- &#xf186-->
-
-    <i class="icon-moon"></i>
+    
+    <div id="test">
+        A
+    </div>
+    <div id="moon">&#xf186</div>
+    <i class="icon-moon animate-spin"></i>
     <!-- 코드가 아니라 이름을 클래스 명으로 사용해서 호출 -->
+    <!-- spin 애니메이션을 줄수도 있음 (animation.css파일을 링크해주어야함) -->
 
 </body>
 </html>
